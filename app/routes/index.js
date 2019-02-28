@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var models  = require('../models');
+import express from 'express';
+import models from '../models';
+
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,7 +10,7 @@ router.get('/', function(req, res, next) {
     where: {
       movieType: 'RECENT',
     }
-  }).then(function(movies) {
+  }).then(movies => {
     res.send(movies);
   });
 });

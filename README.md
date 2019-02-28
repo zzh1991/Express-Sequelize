@@ -19,6 +19,9 @@ npm install --save-dev nodemon
 ```bash
 npm install --save sequelize pg pg-hstore
 npm install --save-dev sequelize-cli
+
+mkdir app
+mv bin config migrations models public routes views app.js seeders app/
 ```
 
 ### Initialize Sequelize
@@ -35,3 +38,8 @@ node_modules/.bin/sequelize init
 ```
 
 ### Add model
+
+## Support ES6
+```
+npm install --save-dev @babel/core @babel/register @babel/preset-env @babel/cli
+```

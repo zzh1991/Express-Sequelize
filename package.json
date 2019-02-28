@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./build/bin/www",
+    "dev": "nodemon ./app/bin/www",
+    "build": "rm -rf ./build && mkdir build && babel --out-dir ./build --source-maps --copy-files ./app"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -15,6 +17,10 @@
     "sequelize": "^4.42.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
     "nodemon": "^1.18.10",
     "sequelize-cli": "^5.4.0"
   }
