@@ -50,6 +50,13 @@ npm install --save-dev @babel/core @babel/register @babel/preset-env @babel/cli
 },
 ```
 
+### macOS Docker Host
+> host.docker.internal
+
+```bash
+docker run -d --name express -p 3000:3000 -e HOST=host.docker.internal  express-sequelize:20190301.0000
+```
+
 ## 更多阅读
 - [Manual | Sequelize | The node.js ORM for PostgreSQL, MySQL, SQLite and MSSQL](http://docs.sequelizejs.com/)
 - [Express "Hello World" example](https://expressjs.com/en/starter/hello-world.html)
